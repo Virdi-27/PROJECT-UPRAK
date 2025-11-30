@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+}
+
+section {
+  width: 100%;
+  padding: 100px 9% 60px;
+  box-sizing: border-box;
+}
+
+a {
+  color: fff;
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 25px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-left: 35px;
+}
+
+.navbar ul li a {
+  font-size: 20px;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+  color: skyblue;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 9% 0;
+}
+
+.home-info h1 {
+  font-size: 55px;
+}
+
+.home-info h2 {
+  font-size: 32px;
+  margin-top: -10px;
+}
+
+.home-info p {
+  font-size: 16px;
+  margin: 10px 0 25px;
+}
+
+.home-info .btn-sci {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: skyblue;
+  border: 2px solid skyblue;
+  box-shadow: 0 0 10px skyblue;
+  font-size: 16px;
+  color: #1f242d;
+  font-weight: 600;
+  transition: .5s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: skyblue;
+  box-shadow: none;
+}
+
+.home-info .bt.btn-sci .sci {
+  margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid skyblue;
+  border-radius: 50%;
+  font-size: 20px;
+  color: skyblue;
+  margin: 0 8px;
+  transition: .5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+  background: skyblue;
+  color: #1f242d;
+  box-shadow: 0 0 10px skyblue;
+}
+
+.photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(254, 255, 255, 0.8);
+  flex-shrink: 0;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #f9f9f9;
+  color: #1f242d;
+}
+
+.about-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(254, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-container h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-container p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4.5rem;
+  color: #1f242d;
+}
+
+.section-title span {
+  color: skyblue;
+  border-bottom: 3px solid skyblue;
+  padding-bottom: 4px;
+}
+
+
+.about-details ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about-details li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-details strong {
+  color: skyblue;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.read-more-label {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: skyblue;
+  color: #1f242d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-more-label:hover {
+  background-color: #1f242d;
+  color: skyblue;
+  border: 2px solid skyblue;
+}
+
+.about-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 0;
+}
+
+.toggle-checkbox:checked ~ .read-more-label::after {
+  content: " (Read Less)";
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.toggle-checkbox:checked ~ .about-details {
+  max-height: 500px;
+  margin-top: 20px;
+}
+
+.pendidikan-experience {
+  padding: 80px 9%;
+  background-color: #f9f9f9;
+  color: #1f242d;
+  text-align: center;
+}
+
+.pendidikan-experience .section-title {
+  font-size: 4rem;
+  margin-bottom: 60px;
+}
+
+.pendidikan-experience .section-title span {
+  color: skyblue;
+}
+
+.garis-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  padding: 40px 0;
+  overflow-x: auto;
+}
+
+.garis-horizontal::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: skyblue;
+  z-index: 1;
+}
+
+.garis-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.garis-icon {
+  width: 60px;
+  height: 60px;
+  background: skyblue;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.skills-section {
+  padding: 80px 9%;
+  background: linear-gradient(to right, #e0f7fa, #f0f8ff);
+  color: #1f242d;
+}
+
+.skills-section .section-title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skills-section .section-title span {
+  color: #00bcd4;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.skill-card {
+  background: #fff;
+  border-left: 6px solid skyblue;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #444;
+}
+
+.pesan-section {
+  padding: 80px 9%;
+  background: linear-gradient(to right, #fff, #e3f2fd);
+  color: #1f242d;
+  text-align: center;
+}
+
+.pesan-section .section-title {
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+
+.pesan-section .section-title span {
+  color: #2196f3;
+}
+
+.pesan-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-left: 6px solid #2196f3;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  position: relative;
+}
+
+.pesan-box::before {
+  content: "“";
+  font-size: 60px;
+  color: #2196f3;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.home, .about, .pendidikan-experience, .skills-section, .pesan-section {
+  min-height: 100vh;
+}
